@@ -1,0 +1,60 @@
+/* font */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$font:"Montserrat", sans-serif;
+
+/* Colors */
+
+$agreen: #0bb697;
+$grey-green:rgb(8,136,113);
+
+$light-grey:rgb(176,176,176);
+$dark-grey:rgb(130,130,130);
+$light-bg-grey:rgb(234,234,234);
+$dark-bg-grey:rgb(226,226,226);
+
+/* font-size */
+
+@mixin font-size($size-value){
+	font-size:$size-value * 0.8px;
+	font-size:($size-value/10) * 0.8rem;
+	font-family:$font;
+	font-weight:400;
+}
+
+body{
+	font-size:62.5%;
+}
+
+/* font styling */
+
+h1{
+	@include font-size(44);
+	color:#fff;
+}
+
+h2{
+	@include font-size(28);
+}
+
+h3{
+	@include font-size(20);
+}
+
+h4{
+	@include font-size(18);
+}
+
+h5{
+	@include font-size(16)
+}
+
+h6,
+li{
+	@include font-size(14)
+}
+
+p{
+	@include font-size(12)
+}

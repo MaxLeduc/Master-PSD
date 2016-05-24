@@ -1,0 +1,403 @@
+@media (max-width:1100px){
+
+	.nav-menu{
+		ul{
+			position:absolute;
+			top:0;
+			left:-300px;
+			width:100%;
+		}
+
+		ul li{
+			display:none;
+		}
+
+		button{
+			display:none;
+		}
+
+		ul.show{
+			visibility:visible;
+			opacity:1;
+			display:block;
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			text-align: center;
+			transition:all 0.5s;
+			background:white;
+			z-index:1;
+
+			li{
+				display:block;
+				padding:10px 0;
+				position:relative;
+				max-width:350px;
+				margin:0 auto;
+				
+					a{
+					&:hover{
+						color:$agreen;
+						}
+					}
+					a:hover:before,
+					a:hover:after{
+							border-bottom:2px dotted $agreen;
+					}
+				}
+
+			a:before{
+				position:absolute;
+				content:"";
+				border-bottom:2px dotted $light-grey;
+				width:10%;
+				top:50%;
+				left:25%;
+			}
+
+			a:after{
+				position:absolute;
+				content:"";
+				border-bottom:2px dotted $light-grey;
+				width:10%;
+				top:50%;
+				right:25%;
+			}
+		}
+
+		.bars{
+			position:fixed;
+			visibility:visible;
+			opacity:1;
+			display:inline-block;
+			top:5%;
+			right:5%;
+		}
+	}
+
+	.our-portfolio{
+
+		.box{
+
+			figure{
+				height:250px;
+			}
+		}
+	}
+}
+
+@media (max-width:940px){
+
+	.our-services{
+		.title{
+			text-align:center;
+
+			h2,
+			h5{
+				width:100%;
+			}
+		}
+
+		.box{
+			width:50%;
+		}
+	}
+
+	.our-blog{
+		.content{
+			flex-wrap:wrap;
+		}
+		.box{
+			width:calc(50% - 20px);
+			margin:20px auto;
+		}
+	}
+
+	.our-portfolio{
+		.box{
+			margin:20px 10px;
+			width:calc(50% - 20px);
+
+			figure{
+				height:300px;
+			}
+		}
+	}
+
+	.our-skills{
+		.wrapper{
+			display:block;
+
+		.title{
+			width:100%;
+			text-align:center;
+		}
+
+		aside{
+			margin:0 auto;
+		}
+		}
+	}
+
+	.contact-us{
+
+		.wrapper{
+			display:flex;
+			flex-direction:column-reverse;
+			justify-content:space-between;
+		}
+
+		.left,
+		.right{
+			padding:20px;
+		}
+
+		.left{
+
+			img{
+				display:block;
+				margin:0 auto;
+				margin-bottom:10px;
+			}
+		}
+	}
+
+	.newsletter{
+
+		h5{
+			width:100%;
+		}
+	}
+
+	.newsletter{
+		text-align:center;
+
+		form{
+
+			input[type=email]{
+				width:100%;
+			}
+
+			input[type=submit]{
+				display:block;
+				margin:0 auto;
+				margin-bottom:20px;
+			}
+		}
+	}
+
+	footer{
+
+		.right{
+			display:block;
+		}
+	}
+
+}
+
+@media (max-width:780px){
+	header{
+		height:825px;
+	}
+}
+
+@media (max-width:666px){
+
+	header{
+		h1{
+			@include font-size(36);
+			margin-bottom:50px;
+		}
+
+		h3{
+			display:none;
+		}
+
+		.white-frame{
+			margin-bottom:16vw;
+		}
+	}
+
+	.our-services{
+
+		.box{
+			width:100%;
+
+			figure{
+				max-width:120px;
+			}
+		}
+	}
+
+	.our-blog{
+
+		.title{
+			display:block;
+	
+			aside{
+				width:100%;
+				text-align:center;
+				margin-bottom:40px;
+
+				h2,
+				h5{
+					width:100%;
+				}
+			}
+
+			button{
+				display:block;
+				margin:0 auto;
+			}
+		}
+
+		.box{
+			display:none;
+		}
+
+		.responsive-box{
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			width:100%;
+		}
+	}
+
+	.our-portfolio{
+		text-align:center;
+		.title{
+			display:block;
+	
+			aside{
+				width:100%;
+				margin-bottom:40px;
+
+				h2,
+				h5{
+					width:100%;
+				}
+			}
+		}
+		
+		.content{
+			flex-direction:row;
+			justify-content:center;
+			flex-wrap:wrap;
+		}
+
+		.box{
+			width:100%;
+			max-width:325px;
+
+			figurecaption{
+				display:none;
+			}
+
+			button{
+				display:inline-block;
+			}
+		}
+	}
+
+	.contact-us{
+		
+		.left{
+
+			.gmap{
+			  height:400px;
+			}
+
+			#gmap_canvas{
+			  height:400px;
+			}
+		}
+	}
+
+		footer{
+
+			.wrapper{
+				display:block;
+				text-align:center;
+			}
+
+			.left,
+			.right{
+				width:100%;
+				padding:20px;
+
+				h6{
+					display:inline-block;
+				}
+			}
+
+			.sm-wrapper{
+				margin:0 auto;
+			}
+		}
+}
+
+@media (max-width:505px){
+
+	.hero-text{
+
+		button{
+			margin-bottom:0px;
+		}
+	}
+
+	.our-skills{
+		aside{
+			display:block;
+			text-align:center;
+		}
+	}
+
+	footer{
+		.left,
+		.right{
+			padding:20px 0;
+		}
+
+		.right{
+
+			h6{
+				text-align:left;
+			}
+		}
+	}
+
+}
+
+@media (max-width:380px){
+
+	header{
+		height:600px;
+	}
+
+	.hero-text{
+		
+		h1{
+			margin-bottom:30px;
+			@include font-size(28);
+		}
+
+		button{
+			margin-bottom:-20px;
+		}
+	}
+
+	.contact-us{
+		
+		.left{
+
+			.gmap{
+			  height:300px;
+			}
+
+			#gmap_canvas{
+			  height:300px;
+			}
+		}
+	}
+}
